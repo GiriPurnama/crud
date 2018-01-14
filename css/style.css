@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+.wrapper{
+	min-height: 960px;
+}
+form#empForm, form#editForm {
+	padding: 0 35px 15px;
+}
+label.gender {
+	padding-top: 0 !important;
+}
+table tr th{
+    background: #f8f8f8;
+}
+.search-box {
+    padding-bottom: 0;
+}
+.pagination{
+	margin: 10px 0px !important;
+}
+.pagination li{
+	display: inline-block;
+}
+.pagination span{
+	margin: -14px 0px;
+	padding: 7px !important;
+	margin-left: 0px !important;
+}
+@media screen and (max-width: 368px){
+.wrapper{
+    min-width: 340px;
+}   
+}

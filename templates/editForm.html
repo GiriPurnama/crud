@@ -1,0 +1,37 @@
+<!-- Form used for updation of data into database -->
+<form class="form-horizontal alert alert-warning" id="editForm" ng-submit="UpdateInfo(currentUser)" hidden>
+<h3 class="text-center">Update User Details</h3>
+	<div class="form-group">
+		<label for="Name">Username:</label>
+		<input type="text" class="form-control" ng-model="currentUser.crud_username" value="{{currentUser.crud_username}}">
+	</div>
+	
+	<div class="form-group">
+		<label for="Password">Password:</label>
+		<input type="password" class="form-control" ng-model="currentUser.crud_password" value="{{currentUser.crud_password}}">
+	</div>
+	
+	<div class="form-group">
+		<label for="Fullname">Fullname:</label>
+		<input type="text" class="form-control" ng-model="currentUser.crud_fullname" value="{{currentUser.crud_fullname}}">
+	</div>
+
+	<div class="form-group">
+		<label for="City">City:</label>
+		<input type="text" class="form-control" ng-model="currentUser.crud_city" value="{{currentUser.crud_city}}">
+	</div>
+	
+	<div class="form-group">
+		<label for="Status">Status:</label>
+		<label for="" class="radio-inline gender">
+			<input type="radio" ng-model="currentUser.crud_status" value="single" >Single
+		</label>
+		<label for="" class="radio-inline gender">
+			<input type="radio" name="status" ng-model="currentUser.crud_status" value="married">Married
+		</label>
+	</div>
+
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="empList.$invalid" ng-click="updateMsg(currentUser.emp_id)">Update</button>
+	</div>
+</form>

@@ -1,0 +1,48 @@
+<!-- Form used to add new entries of employee in database -->
+<form class="form-horizontal alert alert-warning" name="empList" id="empForm" ng-submit="insertInfo(empInfo);" hidden>
+<h3 class="text-center">Insert User Details Into Database</h3>
+	<div class="form-group">
+		<label for="Name">Username:</label>
+		<input type="text" name="crud_username" class="form-control" placeholder="Enter Username" ng-model="empInfo.username" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="empList.crud_username.$invalid && empList.crud_username.$dirty">Username field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Password">Password:</label>
+		<input type="password" name="crud_password" class="form-control" placeholder="Enter Password" ng-model="empInfo.password" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="empList.crud_password.$invalid && empList.crud_password.$dirty">Username field is Empty!</p>
+	</div>
+
+	<div class="form-group">
+		<label for="Fullname">Fullname:</label>
+		<input type="text" name="crud_fullname" class="form-control" placeholder="Enter Fullname" ng-model="empInfo.fullname" autofocus required />		
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="empList.crud_fullname.$invalid && empList.crud_fullname.$dirty">Fullname field is Empty!</p>
+	</div>
+
+	<div class="form-group">
+		<label for="City">City:</label>
+		<input type="text" name="crud_city" class="form-control" placeholder="Enter City" ng-model="empInfo.city" autofocus required />	
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="empList.crud_city.$invalid && empList.crud_city.$dirty">City field is Empty!</p>
+	</div>
+	
+	<div class="form-group">
+		<label for="Gender">Status:</label>
+		<label for="" class="radio-inline gender">
+			<input type="radio" name="crud_status" value="single" ng-model="empInfo.status">Single
+		</label>
+		<label for="" class="radio-inline gender">
+			<input type="radio" name="crud_status" value="married" ng-model="empInfo.status">Married
+		</label>
+	</div>
+
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="empList.$invalid">Add Into Database</button>
+	</div>
+</form>
